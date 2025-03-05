@@ -1,5 +1,5 @@
 movies = {}
-average_rating  = 0
+ratings  = 0
 
 while True:
 
@@ -9,8 +9,8 @@ while True:
 
 	if user_choice == 1:
 
-		movie_box = input("Enter the movie name: ")
-		print(f"movie {movie_box} added!")
+		movie_name = input("Enter the movie name: ")
+		print(f"movie {movie_name} added!")
 
 	if user_choice == 2:
 
@@ -29,11 +29,11 @@ while True:
 
 		for title, ratings in movies.items():
 
-			average_rating = sum(ratings) / len(ratings)
+			ratings = sum(ratings) / len(ratings)
 
-			print(f"{title}: {average_rating:.2f}")
+			print(f"{title}: {ratings:.2f}")
 
-		if average_rating  == 0:
+		if ratings  == 0:
 
 			print("No rating yet")
 
